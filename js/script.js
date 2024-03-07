@@ -143,4 +143,18 @@ console.log(arrayFuso);
 
 // SNACK5
 
+const arrayOriginale = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const a = 2;
+const b = 5;
+const arrayFiltrato = filtraArrayPerPosizione(arrayOriginale, a, b);
+console.log(arrayFiltrato); 
 
+// funzione
+function filtraArrayPerPosizione(array, a, b) {
+  if (a < 0 || b >= array.length || a >= b) {
+      // Se i parametri non sono validi, restituisci un array vuoto
+      return [];
+  }
+
+  return array.slice(a, b + 1);
+}
