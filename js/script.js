@@ -110,3 +110,37 @@ const output2 = document.getElementById('output2');
 output2.innerHTML = `Il peso totale delle zucchine over 15 cm è di ${pesoTotaleOver} gr invece Il peso totale delle zucchine under 15 cm è di ${pesoTotaleUnder} gr `
 
 
+// SNACK3
+
+const stringaIniziale = "Ciao";
+const stringaGirata = reverseStringa(stringaIniziale);
+console.log(stringaGirata);
+
+// funzione
+function reverseStringa(stringa) {
+  return stringa.split('').reverse().join('');
+}
+
+// SNACK4
+
+const arrayLettere = ['a', 'b', 'c'];
+const arrayNumeri = [1, 2, 3];
+const arrayFuso = fondaArray(arrayLettere, arrayNumeri);
+
+// funzione
+function fondaArray(arrayLettere, arrayNumeri) {
+  const lunghezza = arrayLettere.length; 
+  const risultato = [];
+
+  for (let i = 0; i < lunghezza; i++) {
+      risultato.push(arrayLettere[i], arrayNumeri[i]);
+  }
+
+  return risultato;
+}
+
+console.log(arrayFuso);
+
+// SNACK5
+
+
