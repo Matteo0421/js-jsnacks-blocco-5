@@ -1,5 +1,4 @@
-
-const output1 = document.getElementById('output1');
+// SNACK 1
 
 const raccolto = [
   {
@@ -68,19 +67,31 @@ const raccolto = [
 
 // console.log(peso,varieta);
 
-// SNACK 1
+
+const output1 = document.getElementById('output1');
+
 let pesoTotale = 0;
 
 for ( const {peso} of raccolto){
   console.log(peso);
-  pesoTotale += peso;
+  pesoTotale +=parseInt(peso) ;
+}
+
+for(let zucchina of raccolto){
+  const {peso} = zucchina;
+  console.log('----->', peso);
 }
 output1.innerHTML = `Il peso totale delle zucchine è di ${pesoTotale} gr `
 console.log(pesoTotale);
 
 // SNACK 2
+
+const output2 = document.getElementById('output2');
 const zucchineUnder15 = [];
 const zucchineOver15 = [];
+
+let pesoTotaleOver = 0;
+let pesoTotaleUnder = 0;
 
 for ( const zucchina of raccolto){
   if (parseInt(zucchina.lunghezza)< 15) {
@@ -92,10 +103,6 @@ for ( const zucchina of raccolto){
   console.log(zucchineOver15, zucchineUnder15);
 }
 
-let pesoTotaleOver = 0;
-let pesoTotaleUnder = 0;
-
-
 for ( const {peso} of zucchineOver15){
   console.log(peso);
   pesoTotaleOver += peso;
@@ -104,8 +111,6 @@ for ( const {peso} of zucchineUnder15){
   console.log(peso);
   pesoTotaleUnder += peso;
 }
-
-const output2 = document.getElementById('output2');
 
 output2.innerHTML = `Il peso totale delle zucchine over 15 cm è di ${pesoTotaleOver} gr invece Il peso totale delle zucchine under 15 cm è di ${pesoTotaleUnder} gr `
 
